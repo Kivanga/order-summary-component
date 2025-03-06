@@ -18,9 +18,140 @@
 
 }
 
+/* Base Reset */
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: "Red Hat Display", sans-serif;
+}
+
+body {
+    background: url('./images/pattern-background-desktop.svg') no-repeat top center;
+    background-color: var(--pale-blue);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.6;
+    padding: 1.5rem;
+}
+
+/* Main card content */
+.card {
+   background: var(--very-pale-blue);
+   border-radius: 20px;
+   box-shadow: 0 15px 25px rgba( 0, 0, 0, 0.1 );
+   max-width: 450px;
+   width: 100%;
+   overflow: hidden;
+}
+
+/* Hero Image */
+.card__hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Content Spacing */
+.card__content {
+    padding: 2.5rem;
+    text-align: center;
+}
+
+.card__content > * + * {
+    margin-top: 1rem;
+}
+
+/* Typography */
+.card__title {
+    color: var(--dark-blue);
+    font-weight: var(--fw-black);
+    font-size: 1.75rem;
+}
+
+.card__description {
+    color: var(--desaturated-blue);
+    font-weight: var(--fw-medium);
+    padding: 0 1rem;
+    /* font-size: 0.875rem; */
+}
+
+/* Plan section */
+.plan {
+    background-color: var(--very-pale-blue);
+    border-radius: 12px;
+    padding: 1.5rem;
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.plan__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.plan__icon {
+    flex-shrink: 0;
+}
+
+.plan__detaisl {
+    text-align: left;
+    margin-right: auto;
+}
+
+.plan__name {
+    color: var(--dark-blue);
+    font-weight: var(--fw-black);
+}
+
+.plan__price {
+    color: var(--desaturated-blue);
+    font-weight: var(--fw-medium);
+}
+
+.plan__change {
+    color: var(--bright-blue);
+    font-weight: var(--fw-bold);
+    text-decoration: underline;
+}
+
+.plan__change:hover {
+    text-decoration: none;
+}
+
+/* Buttons */
+.button {
+    display: block;
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 12px;
+    font-weight: var(--fw-black);
+    /* transition: all 0.3s ease; */
+}
+
+.button--primary {
+    background-color: var(--bright-blue);
+    color: var(--very-pale-blue);
+    box-shadow: 0 15px 20px rgba( 56, 41, 224, 0.2 );
+}
+
+.button--primary:hover {
+    background-color: hsl( 245, 75%, 42% );
+}
+
+.button--link {
+    color: var(--desaturated-blue);
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.button--link:hover {
+    color: var(--dark-blue);
 }
